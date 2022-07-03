@@ -90,6 +90,11 @@ add_cart.onclick = function(){
     
 }
 
+checkout_cart.onclick = function(){
+    item_no.style.display = "none";
+    alert("thanks for purchasing");
+}
+
 let deleteitems = document.getElementById("delete");
 
 deleteitems.onclick = function(){
@@ -116,6 +121,11 @@ image1_thumb[0].onclick = function(){
     image2[0].classList.remove("active");
     image3[0].classList.remove("active");
     image4[0].classList.remove("active");
+    //opacity configuration
+    image1_thumb[0].style.opacity = "0.5";
+    image2_thumb[0].style.opacity = "1";
+    image3_thumb[0].style.opacity = "1";
+    image4_thumb[0].style.opacity = "1";
 }
 
 image2_thumb[0].onclick = function(){
@@ -123,6 +133,11 @@ image2_thumb[0].onclick = function(){
     image1[0].classList.remove("active");
     image3[0].classList.remove("active");
     image4[0].classList.remove("active");
+    //opacity configuration
+    image2_thumb[0].style.opacity = "0.5";
+    image1_thumb[0].style.opacity = "1";
+    image3_thumb[0].style.opacity = "1";
+    image4_thumb[0].style.opacity = "1";
 }
 
 image3_thumb[0].onclick = function(){
@@ -130,6 +145,11 @@ image3_thumb[0].onclick = function(){
     image1[0].classList.remove("active");
     image2[0].classList.remove("active");
     image4[0].classList.remove("active");
+    //opacity configuration
+    image3_thumb[0].style.opacity = "0.5";
+    image1_thumb[0].style.opacity = "1";
+    image2_thumb[0].style.opacity = "1";
+    image4_thumb[0].style.opacity = "1";
 }
 
 image4_thumb[0].onclick = function(){
@@ -137,6 +157,11 @@ image4_thumb[0].onclick = function(){
     image1[0].classList.remove("active");
     image2[0].classList.remove("active");
     image3[0].classList.remove("active");
+    //opacity configuration
+    image4_thumb[0].style.opacity = "0.5";
+    image1_thumb[0].style.opacity = "1";
+    image3_thumb[0].style.opacity = "1";
+    image2_thumb[0].style.opacity = "1";
 }
 
 // thumbnails image control for modal instance
@@ -169,7 +194,11 @@ image4_thumb[1].onclick = function(){
     image3[1].classList.remove("active");
 }
 
+// removing mdal effect for small devices
 
+if($(window).width() < 790){
+    $('.carousel-item').find('img').removeAttr('data-bs-toggle');
+}
 
 
 

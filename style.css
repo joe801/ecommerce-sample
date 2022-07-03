@@ -177,10 +177,16 @@ nav ul li:first-child{
 
 #details-section .quantity img:first-child{
     margin-left: 1rem;
+    cursor: pointer;
+}
+
+#details-section .quantity img:first-child:hover, #details-section .quantity img:last-child:hover{
+    opacity: 0.5;
 }
 
 #details-section .quantity img:last-child{
     margin-right: 1rem;
+    cursor: pointer;
 }
 
 #details-section .button{
@@ -194,6 +200,11 @@ nav ul li:first-child{
     margin: 1rem 0;
     font-size: 00.8rem;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+#details-section .button:hover{
+    opacity: 0.5;
 }
 
 #details-section .button img{
@@ -288,9 +299,6 @@ aside .content .items .checkout button{
 }
 
 @media (min-width: 1000px){
-    body{
-        /* height: 150vh; */
-    }
     /* navbar styling */
     #menu-btn{
         display: none;
@@ -357,6 +365,7 @@ aside .content .items .checkout button{
     }
 
     #thumbnails{
+        cursor: pointer;
         width: 100%;
         display: flex;
         margin-top: 2rem;
@@ -474,9 +483,6 @@ aside .content .items .checkout button{
 @media (min-width: 1400px){
     body{
         font-size: 20px;
-    }
-    aside .content{
-        
     }
 }
 
